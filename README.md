@@ -35,7 +35,7 @@ Corresponding learning figures are found under [./Learning Figures](https://gith
 | Entropy target | $\texttt{-action dimension}$ |
 | SAC log standard deviation clipping | $(-20, 2)$ |
 | SAC $\epsilon$ | $10^{-6}$ |
-| Initial $\beta$-Space Exploration $\lambda$ | $0.3$ |
+| $\beta$-Space Exploration $\lambda$ at time step $t$ | $0.3 - \frac{0.3 \times t}{\texttt{total time steps}} $ |
 | $\mu$ (environment-related) | 0 |
 | $\kappa$ (environment-related) | 1.5 |
 | Channel noise variance $\sigma_{e}^{2}$ (environment-related) | $10^{-2}$ |
