@@ -8,6 +8,42 @@ The algorithm is tested, and the results are produced on a custom RIS-assisted m
 Learning curves for the results presented in the paper are found under [./Learning Curves](https://github.com/baturaysaglam/RIS-MISO-PDA-Deep-Reinforcement-Learning/tree/main/Learning%20Curves). Each learning curve is formatted as NumPy arrays of 20000 instant rewards (20000,).
 Corresponding learning figures are found under [./Learning Figures](https://github.com/baturaysaglam/RIS-MISO-PDA-Deep-Reinforcement-Learning/tree/main/Learning%20Figures). The learning curves depict instant rewards achieved by the agents for 20000 training steps, averaged over ten random seeds.
 
+### Pseudocode
+<img src="https://github.com/baturaysaglam/RIS-MISO-PDA-Deep-Reinforcement-Learning/blob/main/pseudocode.jpg" width="450">
+
+### The Hyper-Parameter Setting
+| Hyper-Parameter  | Value |
+| ------------- | ------------- |
+| # of hidden layers (all networks) | $2$ |
+| # of units in each hidden layer (all networks) | $256$ |
+| Hidden layers activation (all networks) | ReLU | 
+| Final layer activation (Q-networks) | Linear |
+| Final layer activation (actor, explorer) | tanh |
+| Learning rate $\eta$ (all networks) | $10^{-3}$ |
+| Weight decay (all networks) | None |
+| Weight initialization (all networks) | Xavier uniform |
+| Bias initialization (all networks) | constant |
+| Optimizer (all networks) | Adam |
+| Total time steps per training | $20000$ |
+| Experience replay buffer size | $20000$ |
+| Experience replay sampling method | uniform |
+| Mini-batch size | $16$ |
+| Discount term $\gamma$ | $1$ |
+| Learning rate for target networks $\tau$ (all networks) | $10^{-3}$ |
+| Network update interval (all networks) | after each environment step |
+| Initial $\alpha$ | $0.2$ |
+| Entropy target | $\texttt{-action dimension}$ |
+| SAC log standard deviation clipping | $(-20, 2)$ |
+| SAC $\epsilon$ | $10^{-6}$ |
+| Initial $\beta$-Space Exploration $\lambda$ | $0.3$ |
+| $\mu$ (environment-related) | 0 |
+| $\kappa$ (environment-related) | 1.5 |
+| Channel noise variance $\sigma_{e}^{2}$ (environment-related) | $10^{-2}$ |
+| AWGN channel variance $\sigma_{w}^{2}$ (environment-related) | $10^{-2}$ |
+| Channel matrix initialization (Rayleigh) (environment-related) | $\mathcal{CN}(0, 1)$ |
+
+
+
 ### Computing Infrastructure
 The hardware/software model/version alters the DRL agents' training stochasticity due to the use of random seeds. Therefore, it complicates the precise reproduction of the reported results. The following computing infrastructure is used to produce the results.
 
