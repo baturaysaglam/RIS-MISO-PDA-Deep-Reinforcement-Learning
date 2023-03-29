@@ -1,6 +1,6 @@
 # Joint Transmit Beamforming and Phase Shifts Design with Deep Reinforcement Learning Under the Phase-Dependent Amplitude Model
 
-PyTorch implementation of the paper, [_Deep Reinforcement Learning Based Joint Downlink Beamforming and RIS Configuration in RIS-aided MU-MISO Systems Under Hardware Impairments and Imperfect CSI_](https://arxiv.org/abs/2211.09702).
+PyTorch implementation of the paper, [_Deep Reinforcement Learning Based Joint Downlink Beamforming and RIS Configuration in RIS-aided MU-MISO Systems Under Hardware Impairments and Imperfect CSI_](https://arxiv.org/abs/2211.09702), which was accepted to 2023 IEEE International Conference on Communications the 5th Workshop on Data Driven Intelligence for Networks and Systems (DDINS).
 
 For the first time in the literature, we solve a Reconfigurable Intelligent Surface (RIS) assisted multi-user multi-input single-output (MISO) System problem under _hardware impairments_ through a machine learning approach. Specifically, the deep reinforcement learning algorithm of [SAC](https://proceedings.mlr.press/v80/haarnoja18b.html) combined with [DISCOVER](https://arxiv.org/abs/2210.00293) used to tackle the issues induced by the [phase-dependent amplitude model (PDA)](https://ieeexplore.ieee.org/document/9148961) in RIS-aided systems. 
 
