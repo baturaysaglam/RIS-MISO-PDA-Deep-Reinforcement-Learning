@@ -1,8 +1,24 @@
 # Joint Transmit Beamforming and Phase Shifts Design with Deep Reinforcement Learning Under the Phase-Dependent Amplitude Model
 
-PyTorch implementation of the paper, [_Deep Reinforcement Learning Based Joint Downlink Beamforming and RIS Configuration in RIS-aided MU-MISO Systems Under Hardware Impairments and Imperfect CSI_](https://arxiv.org/abs/2211.09702), which was accepted to 2023 IEEE International Conference on Communications the 5th Workshop on Data Driven Intelligence for Networks and Systems (DDINS).
+### Proceedings are out!
+If you use our code/results, please cite the paper.
+```
+@INPROCEEDINGS{10283517,
+  author={Saglam, Baturay and Gurgunoglu, Doga and Kozat, Suleyman S.},
+  booktitle={2023 IEEE International Conference on Communications Workshops (ICC Workshops)}, 
+  title={Deep Reinforcement Learning Based Joint Downlink Beamforming and RIS Configuration in RIS-Aided MU-MISO Systems Under Hardware Impairments and Imperfect CSI}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={66-72},
+  doi={10.1109/ICCWorkshops57953.2023.10283517}
+}
+```
 
-For the first time in the literature, we solve a Reconfigurable Intelligent Surface (RIS) assisted multi-user multi-input single-output (MISO) System problem under _hardware impairments_ through a machine learning approach. Specifically, the deep reinforcement learning algorithm of [SAC](https://proceedings.mlr.press/v80/haarnoja18b.html) combined with [DISCOVER](https://arxiv.org/abs/2210.00293) used to tackle the issues induced by the [phase-dependent amplitude model (PDA)](https://ieeexplore.ieee.org/document/9148961) in RIS-aided systems. 
+##
+PyTorch implementation of the paper, [_Deep Reinforcement Learning Based Joint Downlink Beamforming and RIS Configuration in RIS-aided MU-MISO Systems Under Hardware Impairments and Imperfect CSI_](https://ieeexplore.ieee.org/document/10283517). The paper has been accepted to 2023 IEEE International Conference on Communications the 5th Workshop on Data Driven Intelligence for Networks and Systems (DDINS).
+
+For the first time in the literature, we solve a Reconfigurable Intelligent Surface (RIS) assisted multi-user multi-input single-output (MISO) System problem under _hardware impairments_ through a machine learning approach. Specifically, the deep reinforcement learning algorithm of [SAC](https://proceedings.mlr.press/v80/haarnoja18b.html) combined with [DISCOVER](https://link.springer.com/article/10.1007/s10994-023-06363-4) used to tackle the issues induced by the [phase-dependent amplitude model (PDA)](https://ieeexplore.ieee.org/document/9148961) in RIS-aided systems. 
 
 The algorithm is tested, and the results are produced on a custom RIS-assisted multi-user MISO environment. 
 Learning curves for the results presented in the paper are found under [./Learning Curves](https://github.com/baturaysaglam/RIS-MISO-PDA-Deep-Reinforcement-Learning/tree/main/Learning%20Curves). Each learning curve is formatted as NumPy arrays of 20000 instant rewards (20000,).
